@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: max-content;
+}
+h6 {  
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+#cardimage {
+    height: 40em;
+    width: 70%;
+    background-image: url(/Images/bg-main-desktop.png);
+}
+
+.cardform {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#holdername, #cardnumber {
+    width: 25em;
+    height: 2.5em;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+}
+.down {
+    display: flex;
+    justify-content: space-between;
+}
+#expyear, #expmonth {
+    flex-direction: column;
+    width: 4.5em;
+    height: 2.5em;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 10px;
+}
+#cvc {
+    height: 2.5em;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 10px;
+}
+.button {
+    width: 25em;
+    height: 3em;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    margin-top: 40px;
+}
+#images {
+    margin-top: 20%;
+    margin-left: 50%;
+    margin-right: auto;
+    background-image: url(/Images/bg-card-front.png);
+    width: 20em; 
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+}
+
+#imagesback {
+    margin-top: 10%;
+    margin-left: 60%;
+    background-image: url(/Images/bg-card-back.png);
+    width: 20em;
+    height: 25%;
+    background-size: cover;
+    border-radius: 5px;
+}
+#frontinput {
+    padding: 20px;
+    margin-right: auto;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.number {
+    font-size: 29px;
+    padding-top: 50px;
+}
+#logo {
+    width: 3em;
+}
+.do {
+    padding-top: 10px;
+    font-size: 13px;
+}
+.cs {
+    position: absolute;
+    right: 1.25rem;
+}
+.cc {
+    position: absolute;
+    right: 2.1875rem;
+}
+.cvv {
+    padding-left: 250px;
+    padding-top: 80px;
+    font-size: 14px;
+    color: white;
+}
+#success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.thankyou {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+.cardsubmit {
+     width: 100%;
+    position: relative;
+    top: 25%;
+    display: none; 
+}
+iframe {
+    display: none;
+}
+@media only screen and (max-width: 920px){
+    #images {
+        margin-left: 20%;
+    }
+    #imagesback {
+        margin-left: 35%;
+    }
+} 
+@media only screen and (max-width: 767px){
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #cardimage {
+        height: 300px;
+        width: 100%;
+        background-image: url(/Images/bg-main-mobile.png);
+    }
+    #imagesback {
+        margin: 0%;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #images {
+        margin: 0%;
+        position: relative;
+        top: 120px;
+        left: 20px;
+        z-index: 1;
+    }
+    .cardform {
+        z-index: 22;
+    }
+}
+@media only screen and (max-width: 375px) {
+    #images {
+        left: 5px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    #images {
+        width: 90%;
+        margin-left: 0px;
+    }
+    #imagesback {
+        width: 90%;
+        height: 100%;
+        right: 0px;
+    }
+    #cvc {
+        height: 2.5em;
+        width: 8em;
+    }
+    .down {
+        justify-content: space-between;
+    }
+    .button {
+        width: 18em;
+    }
+    #cardnumber, #holdername {
+        width: 100%;
+    }
+    .number {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .cvv {
+        position: relative;
+        right: 40px;
+        top: -10px;
+        font-size: 10px;
+    }
+    .number {
+        font-size: 22px;
+    }
+    .name, .cc, .cs {
+        font-size: small;
+    }
+}
+
+
+   
+
+
+
+
+
+
+
+
+

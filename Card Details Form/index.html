@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Card Details Form</title>
+</head>
+<body>
+        <aside id="cardimage">
+            <div id="images">
+                <div id="frontinput"> 
+            <img src="/Images/card-logo.svg" alt="" id="logo">
+            <div class="number">0000 0000 0000 0000</div> 
+            <div class="do"><span class="name">Jane Appleseed</span><span class="cc">00/</span><span class="cs">00</span></div>            
+            </div>
+            </div>
+            <div id="imagesback">
+            <div  class="cvv"><span>000</span></div> </div>
+        </aside>
+    <main class="cardform" id="cardform">
+        <iframe name="formm" id="dummy"  frameborder="0"></iframe>
+        <form target="dummy">
+            <h6>Card Holder name</h6> 
+            <input type="text" placeholder="e.g, Jane Appleseed" id="holdername" required>
+            <h6>Card Number</h6>
+            <input type="text" name="card number" id="cardnumber" 
+            placeholder="e.g 1234 5678 9123 0000" maxlength="16" pattern="[0-9]{16}" required >
+            <div class="down">
+                <div>
+            <h6>Exp. Date(MM)(YY)</h6>
+            <input type="text" name="" id="expmonth" maxlength="2" placeholder="MM" required pattern="[0-9]+">
+            <input type="text" pattern="[0-9]{2}" name="" id="expyear" maxlength="2" placeholder="YY" required>
+            </div>
+            <div>
+            <h6>CVC</h6>
+            <input type="text" name="" id="cvc" placeholder="e.g, 123" maxlength="3" required pattern="[0-9]{3}">
+            
+            </div>
+            </div>
+            <button type="submit" value="Confirm" class="button" id="button">Confirm</button>
+        </form>
+    </main>
+    <div class="cardsubmit" id="result">
+        <div id="success">
+        <img src="/Images/icon-complete.svg" alt="">
+        <h1 class="thankyou">Thank You!</h1>
+        <p>We've added your card details</p>
+        <button class="button" id="continuebtn">Continue</button>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
